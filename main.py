@@ -72,3 +72,7 @@ async def delete_data(request: Request):
     user_id = data.get("user_id")
     # Логіка для видалення даних користувача
     return {"status": "user data deleted", "user_id": user_id}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5555)
